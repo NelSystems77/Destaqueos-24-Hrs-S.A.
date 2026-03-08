@@ -68,7 +68,7 @@
       "url": "/?action=call",
       "icons": [
         {
-          "src": "/icons/icon-96.png",
+          "src": "icons/icon-96.png",
           "sizes": "96x96"
         }
       ]
