@@ -1,5 +1,5 @@
 Destaqueos 24 Horas - PWA
-Progressive Web App (PWA) profesional para Multiservicios Espinoza - Servicios de plomería, destaqueos y mantenimiento disponibles 24/7.
+Progressive Web App (PWA) profesional para Destaqueos 24H S.A. - Servicios de plomería, destaqueos y mantenimiento disponibles 24/7.
 
 🚀 Características
 Funcionalidades Principales
