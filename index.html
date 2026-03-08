@@ -106,19 +106,41 @@
         }
 
         .logo-circle {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--accent-red) 0%, var(--accent-orange) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: bold;
-            box-shadow: var(--shadow-glow);
-            animation: pulse 2s ease-in-out infinite;
-        }
+    width: 60px;
+    height: 60px;
+    /* 1. Quitamos el linear-gradient que podía acentuar el blanco */
+    background: transparent; 
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Corta la imagen si es muy grande */
+
+    /* 2. El difuminado maestro: */
+    /* Usamos múltiples sombras para un efecto más natural y difuso */
+    box-shadow: 
+        /* Sombra externa suave para difuminar hacia afuera */
+        0 0 10px rgba(0, 0, 0, 0.2), 
+        /* Sombra interna para difuminar hacia adentro y cubrir el blanco */
+        inset 0 0 8px rgba(0, 0, 0, 0.4);
+
+    animation: pulse 2s ease-in-out infinite;
+
+    /* Aseguramos que los estilos de fuente anteriores no afecten si la imagen no carga */
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 3. Estilo para la imagen dentro del círculo */
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escala y recorta para llenar, minimizando el blanco visible */
+    border-radius: 50%; /* Asegura que la imagen sea circular */
+    display: block; /* Evita espacios en blanco innecesarios */
+}
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
